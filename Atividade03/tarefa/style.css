@@ -92,8 +92,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 100%); /* Gradiente que começa escuro no centro e vai clareando nas bordas */
-    z-index: 1;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 100%); 
     pointer-events: none;
 }
 
