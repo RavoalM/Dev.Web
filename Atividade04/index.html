@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/Icon.png">
+</head>
+
+<body>
+     <nav>
+        <ul>
+            <li>
+                    <a href="index.html">Sobre mim</a>
+            </li>
+            <li>
+                    <a href="projects.html">Projetos</a>
+            </li>
+            <li>
+                    <a href="contact.html">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+           <header>
+            <div class="center">
+                <img src="assets/img/EuSemAssinatura.png"  onclick="toggleMusic()">
+                <audio id="musica" src="assets/mp3/ThatsMe.mp3" loop></audio>
+                <p>clica na foto</p>
+            </div>
+            <h1>✨Ravoal✨</h1>
+            <h2>ㅤ­­That's me!!!</h2>
+           </header>
+        
+           <main>
+            <section>
+                <h3>Sobre mim</h3>
+                <p>👋 Olar seres! Eu sou o Ravi, Atualmente, estou cursando Sistemas na Uniplac e participando da Academia do Programador, sempre buscando evoluir na área da tecnologia. Afinal mercado tá ai.
+                    <br><br>
+                    Além de programar, eu adoro desenhar (eu que fiz o meu icon), amo acompanhar filmes/series de terror e um dia eu vou ser dublador! Por enquanto de projeto nessa área tem um canal de fan dub que eu participo (tem mais nos projetos sobre)
+                </p>
+            </section>
+            <section>
+                <h3>Curiosidade</h3>
+                <p>O apelido <i>"Ravi"</i> surgiu a partir do meu nome artístico, <i>"Ravoal"</i>, que é um anagrama do meu nome, <i>"Alvaro"</i>. (Anagrama é quando pegamos as letras de uma palavra e as misturamos para formar outra. E sim, é sem acento [erro no cartório]).</p>
+            </section>
+            <section>
+                <h3>Trabalho</h3>
+                <p>Como eu não possuou tempo praticamente pra minha propria vida então não tenho experiencia com trabalho por tanto fiquem com isso!!!! 
+                    <br><br>
+                    <a href="https://youtu.be/j_J_6bdEUC4?si=NOxxcpaFJlZyXrzo"> <I>CLIQUE</I></a></p>
+            </section>
+           </main>
+
+            <img src="assets/img/image.png" class="banner">
+
+           <footer>
+            <a href="https://www.youtube.com/@BlackRosesDubs" target="_blank">
+                <img src="assets/img/youtube.png" alt="YouTube">
+                <span>YouTube</span>
+            </a>
+            <a href="https://www.instagram.com/BlackRosesDubs" target="_blank">
+                <img src="assets/img/insta.png" alt="Instagram">
+                <span>Instagram</span>
+            </a>
+            <a href="https://github.com/RavoalM" target="_blank">
+                <img src="assets/img/github.png" alt="Instagram">
+                <span>Git Hub</span>
+            </a>
+           </footer>
+    </div>
+
+    <script>
+        let audio = document.getElementById("musica");
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+</body>
+</html>

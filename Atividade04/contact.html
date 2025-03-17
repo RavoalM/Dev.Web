@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/Icon.png">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="projects.html">Projetos</a></li>
+            <li><a href="contact.html">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header class="center">
+            <h1>Contato</h1>
+            <button onclick="toggleMusic()">Clica</button>
+                <audio id="musica" src="assets/mp3/ThatsMe.mp3" loop></audio>
+        </header>
+        <main>
+            <section>
+                <h3>Entre em Contato</h3>
+                <p>Preencha o formulário abaixo ou entre em contato pelas redes sociais.</p>
+                
+                <form>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                    
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto" required>
+                    
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </main>
+
+            <footer>
+                <a href="https://www.youtube.com/@BlackRosesDubs" target="_blank">
+                    <img src="assets/img/youtube.png" alt="YouTube">
+                    <span>YouTube</span>
+                </a>
+                <a href="https://www.instagram.com/BlackRosesDubs" target="_blank">
+                    <img src="assets/img/insta.png" alt="Instagram">
+                    <span>Instagram</span>
+                </a>
+                <a href="https://github.com/RavoalM" target="_blank">
+                    <img src="assets/img/github.png" alt="Instagram">
+                    <span>Git Hub</span>
+                </a>
+            </footer>
+    </div>
+    <script>
+        let audio = document.getElementById("musica");
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+</body>
+</html>

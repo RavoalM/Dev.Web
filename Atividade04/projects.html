@@ -1,0 +1,60 @@
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/Icon.png">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="projects.html">Projetos</a></li>
+            <li><a href="contact.html">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header class="center">
+            <h1>Meus Projetos</h1>
+            <button onclick="toggleMusic()">Clica</button>
+                <audio id="musica" src="assets/mp3/ThatsMe.mp3" loop></audio>
+        </header>
+        <main>
+            <section>
+                <h2>Black Roses Dubs</h2>
+                <p>O Black Roses Dubs é um projeto independente focado em dublagem, onde transformamos cenas, animações e conteúdos diversos com nossas vozes. Mais do que apenas um grupo, somos uma equipe apaixonada por dar vida a personagens e histórias, trazendo emoção e originalidade a cada trabalho. 
+                    Nosso objetivo é evoluir constantemente, aprimorando nossas habilidades e expandindo nosso alcance. Seja dublando por diversão ou buscando profissionalização🌹🎙️
+                    <br>
+                    <p>Site que eu fiz falando mais sobre</p><a href="ravoalm.github.io/BlackRoses/" target="_blank"><p>Black Roses Dubs</p></a>
+                </p>
+            </section>
+            <section>
+                <br>
+                <h2>Projeto Hazbin</h2>
+                <p>Eu to tentando de maneira quase mizeravel refazer um antigo site meu que eu havia usado um template, porem tá consideravelmente complicado. É um site que fala sobre
+                    Hazbin Hotel, nele introduz a série, os personagens e tambem a galeria de músicas desde o prórpio pilot da série. </p>
+                    <p>Aqui tem o estado atual do site</p><a href="ravoalm.github.io/Site_Remake/" target="_blank"><p>Hazbin Hotel</p></a>
+            </section>
+            
+        </main>
+    </div>
+
+    <script>
+        let audio = document.getElementById("musica");
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+</body>
+</html>
+
