@@ -1,4 +1,23 @@
-/* style="background-color: #160721; */
+@font-face {
+    font-family: 'Font';
+    src:url(../assets/font/blackcraft/Blackcraft.ttf)
+}
+
+@font-face {
+    font-family: 'Font2';
+    src:url(../assets/font/got_heroin/Got_Heroin.ttf)
+}
+
+.h1 {
+    font-family: Font;
+}
+
+hr {
+    background-color: #DDAA00;
+    height: 5px;
+    border: 0px;
+    border-radius: 10px;
+}
 
 body {
     color: white;
@@ -40,6 +59,7 @@ header img:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
+    border: 6px solid #DDAA00;
 }
 
 .center {
