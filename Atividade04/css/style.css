@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'Font2';
-    src:url(../assets/font/got_heroin/Got_Heroin.ttf)
+    src:url(../assets/font/underwood_champion/uwch.ttf)
 }
 
 .h1 {
@@ -23,7 +23,7 @@ body {
     color: white;
     background-color: #770f38;
     background-image: url('../assets/img/Text.png');
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Font2;
     
 }
 
@@ -91,8 +91,8 @@ main  {
 }
 
 footer img{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 footer{ 
@@ -129,6 +129,7 @@ input, textarea {
     border-radius: 5px;
     background-color: #2e0109;
     color: #DDAA00;
+    font-family: Font2;
 }
 button {
     background-color: #e80f5a;
@@ -138,6 +139,7 @@ button {
     border-radius: 5px;
     margin-top: 20px;
     cursor: pointer;
+    font-family: Font2;
 }
 button:hover {
     background-color: #c00e4d;
