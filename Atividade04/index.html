@@ -26,7 +26,10 @@
     <div class="container">
            <header>
             <div class="center">
-                <img src="assets/img/EuSemAssinatura.png"  onclick="toggleMusic()">
+                <input type="checkbox" id="toggle-music" hidden>
+                <label for="toggle-music" class="music-label">
+                    <img src="assets/img/EuSemAssinatura.png" onclick="toggleMusic()">
+                </label>
                 <audio id="musica" src="assets/mp3/ThatsMe.mp3" loop></audio>
                 <p>clica na foto</p>
             </div>

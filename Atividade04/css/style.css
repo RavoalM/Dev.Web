@@ -32,6 +32,7 @@ nav {
     background-color: #e80f5a;
 }
 
+
 nav a {
     transition: color 0.3s ease-in-out;
 }
@@ -83,6 +84,10 @@ nav a:hover{
     color: rgb(255, 208, 0);
 }
 
+p {
+    line-height: 1.6;
+}
+
 main  {
     margin: 10px;
     padding: 10px;
@@ -100,6 +105,7 @@ footer{
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 footer a {
@@ -145,3 +151,23 @@ button:hover {
     background-color: #c00e4d;
 }
 
+.music-label img {
+    width: 25%;
+    border-radius: 800px;
+    border: 6px solid #e80f5a;
+    transition: transform 0.5s ease-in-out;
+}
+
+#toggle-music:checked + .music-label img {
+    animation: spin 2s linear infinite;
+    border: 6px solid #DDAA00;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
