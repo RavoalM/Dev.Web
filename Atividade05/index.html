@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscreva-se na Nossa Newsletter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/icon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <audio id="hover-sound" src="assets/mp3/Life Is Strange _ Notification ♪ [Sound Effect].mp3"></audio>
+    <audio id="background-music" autoplay loop>
+        <source src="assets/mp3/Life is Strange Soundtrack - Menu Music (Extended).mp3" type="audio/mp3">
+    </audio>
+    
+    <div class="container">
+        <div class="logo">
+            <img src="assets/img/teste.gif">
+            <h2>LIFE IS STRANGE</h2>
+        </div>
+        <nav class="nav">
+            <a href="#" class="interactive">Início</a>
+            <a href="#" class="interactive">Explorar</a>
+            <a href="#" class="interactive">História</a>
+            <a href="#" class="interactive">Contato</a>
+            <a href="#" class="interactive">Mistérios</a>
+        </nav>
+        <button id="toggle-music" class="interactive">🔊 Tocar Música</button>
+    </div>
+</header>
+
+<main class="container">
+    <div class="content">
+        <h1>Enfrente o Destino<br><span>Viva a Experiência</span></h1>
+        <p>
+            O tempo é imprevisível, e suas escolhas podem mudar tudo. Mergulhe em um universo cheio de mistérios, descobertas e desafios. O futuro está nas suas mãos, e as consequências de cada ação são irreversíveis.
+        </p>
+        </p>
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="interactive">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <div class="image-container">
+        <div class="ellipse"></div>
+        <img src="assets/img/Max.png">
+    </div>
+</main>
+
+<script>
+   
+    const music = document.getElementById("background-music");
+    const button = document.getElementById("toggle-music");
+
+    button.addEventListener("click", function () {
+        if (music.paused) {
+            music.play();
+            button.textContent = "🔇 Pausar Música";
+        } else {
+            music.pause();
+            button.textContent = "🔊 Tocar Música";
+        }
+    });
+
+    
+    const buttons = document.querySelectorAll(".button, .form-group button, .nav a");
+    const hoverSound = document.getElementById("hover-sound");
+
+    buttons.forEach(button => {
+        button.addEventListener("mouseenter", () => {
+            hoverSound.currentTime = 0;
+            hoverSound.play();
+        });
+    });
+</script>
+
+</body>
+</html>
