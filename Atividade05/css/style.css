@@ -60,7 +60,6 @@ header {
 .nav {
     display: flex;
     justify-content: flex-end;
-    
 }
 
 .nav a {
@@ -91,7 +90,6 @@ main {
     font-family: Draw;
     color:  white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
-    
 }
 
 .content h1 span {
@@ -118,6 +116,7 @@ main {
     border: 2px solid #333;
     border-radius: 30px;
     background: #2e2e3a;
+    font-family: 'Patrick Hand', cursive;
     color: #fff;
     cursor: url('../assets/cursor/CursorLis/IBeam.cur'), pointer;
 }
@@ -139,7 +138,7 @@ main {
     transform: scale(1.05);
 }
 
-.button, .form-group button{
+.button, .form-group button {
     background: #f28b82;
     color: black;
     padding: 10px 20px;
@@ -150,7 +149,7 @@ main {
     transition: all 0.2s ease-in-out;
 }
 
-.button:hover, .form-group button:hover{
+.button:hover, .form-group button:hover {
     transform: scale(1.05);
     box-shadow: 5px 5px 0px #1f1f1f;
 }
@@ -191,3 +190,102 @@ main {
     50% { transform: translateY(-5px); } 
 }
 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .logo {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav {
+        flex-direction: column;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .nav a {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    .form-group input {
+        padding: 12px;
+    }
+
+    .image-container {
+        max-width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .image-container img {
+        max-width: 90%;
+        margin-top: 20px;
+    }
+
+    #toggle-music {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .form-group button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/* Responsividade para telas muito pequenas*/
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav a {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+
+    .form-group input {
+        font-size: 14px;
+    }
+}
