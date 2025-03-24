@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Patrick Hand', cursive;
-    background: #2a2a46 url(../assets/img/image.png) no-repeat center center;
+    background: url(../assets/img/image.png) no-repeat center center;
     background-size: cover;  
     background-attachment: fixed;
     color: #e0e0e0;
