@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/icon.png">
+</head>
+<body>
+
+    <audio id="background-music" autoplay loop>
+        <source src="assets/mp3/ENA_ Dream BBQ OST - Seashells.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="barras-laterais">
+        <div class="barraD"></div>
+        <div class="barraE"></div>
+    </div>
+
+    <div class="container">
+        <div class="conteudo">
+
+            <h1 class="titulo">Parte 2: Exercícios Práticos (Básicos)</h1>
+
+            <script>
+                alert("Esta realidade foi gerada corretamente?");
+            </script>
+
+            <div class="questao">
+                <p><strong>1. Peça ao usuário seu nome e exiba uma mensagem de 
+                boas-vindas no document.write().</strong><br></p>
+                <script>
+                nome = prompt("Você ainda tem um nome?")
+                document.write(`${nome}... Sim, isso parece certo.`)
+                </script>
+                <br>
+            </div>
+
+            <div class="questao">
+                <p><strong>2. Peça ao usuário um valor em graus Celsius e converta para Fahrenheit 
+                utilizando a fórmula: <i>F = (C x 1.8) + 32.</i></strong><br></p>
+                <script>
+                let celsius =Number.parseFloat(prompt("Qual a temperatura do seu mundo?"));
+
+                let fahrenheit = (celsius * 1.8) +32;
+                document.write(`eu mundo está a ${celsius}C°. Convertendo... Agora está a ${fahrenheit}F°. Mas isso muda algo?`)
+                </script>
+                <br>
+            </div>
+
+            <div class="questao">
+                <p><strong>3. Peça dois números ao usuário e exiba no documento o resultado das 
+                quatro operações matemáticas básicas (+, -, *, /).</i></strong><br></p>
+                <script>
+                let n1 =Number.parseFloat(prompt("Informe o primeiro número dentre números"));
+                let n2 =Number.parseFloat(prompt("Informe o segundo número que pode ser aquele número"));
+
+                let adicao = n1 + n2;
+                let subtracao = n1 - n2;
+                let multi = n1 * n2;
+                let divi = n1 / n2;
+                document.write(`Adição: ${adicao}<br>Subtração: ${subtracao}<br>Multiplicação: ${multi}<br>Divisão: ${divi}`)
+                </script>
+                <br>
+            </div>
+            
+            <a href="index.html" class="botao-voltar">Retornar ao Ciclo Anterior</a>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("background-music").volume = 0.50; 
+</script>
+</html>

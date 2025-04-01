@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'Ena';
+    src: url(../assets/font/Fixedsys\ Excelsior\ 3.01\ Regular.ttf);
+}
+
+body {
+    margin: 0;
+    overflow: hidden; 
+    background: url('../assets/img/Background.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Ena', sans-serif;  
+    background-color: rgb(44, 29, 29);
+    cursor: url('../assets/cursor/Jeelh-Cursor-Dark/Alternate\ Select.cur'), auto;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto; 
+}
+
+.logo {
+    position: absolute;
+    top: 0%;
+    width: 500px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: Ena;
+    margin-top: 50px;
+}
+
+.menu a {
+    display: block;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+    cursor: url('../assets/cursor/Jeelh-Cursor-Dark/Select.cur'), pointer;
+}
+
+.barras-laterais {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.barraD {
+    width: 100px;
+    height: 100vh;
+    background: url('../assets/img/BarraDireita.png') repeat-y;
+    animation: mover 10s linear infinite;
+}
+.barraE {
+    width: 100px;
+    height: 100vh;
+    background: url('../assets/img/BarraEsquerda.png') repeat-y;
+    animation: mover 10s linear infinite;
+}
+
+@keyframes mover {
+    from { background-position: 0 0; }
+    to { background-position: 0 250%; }
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    color: white;
+    overflow-y: hidden;
+    overflow-y: auto; 
+    box-sizing: border-box;
+    max-height: 100vh; 
+}
+
+.titulo {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.questao {
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.6; 
+}
+
+.botao-voltar {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.botao-voltar:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+    cursor: url('../assets/cursor/Jeelh-Cursor-Dark/Select.cur'), pointer;
+}

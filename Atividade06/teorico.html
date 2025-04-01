@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/icon.png">
+</head>
+<body>
+
+    <audio id="background-music" autoplay loop>
+        <source src="assets/mp3/ENA_ Dream BBQ OST - Seashells.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="barras-laterais">
+        <div class="barraD"></div>
+        <div class="barraE"></div>
+    </div>
+
+
+    <div class="container">
+        <div class="conteudo">
+
+            <h1 class="titulo">Parte 1: Questões Teóricas</h1>
+            
+            <div class="questao">
+                <p><strong>1. O que é JavaScript? Explique sua função no desenvolvimento web.</strong><br>
+                JavaScript é uma linguagem de programação usada para criar interatividade em páginas da web, permitindo manipulação de elementos HTML, requisições assíncronas e dinamismo no site.</p>
+            </div>
+            
+            <div class="questao">
+                <p><strong>2. Qual a diferença entre os três tipos de variáveis em JavaScript (var, let e const)?</strong><br>
+                - <strong>var</strong>: Escopo global ou de função, podendo ser redeclarado.<br>
+                - <strong>let</strong>: Escopo de bloco, não pode ser redeclarado no mesmo escopo.<br>
+                - <strong>const</strong>: Escopo de bloco e valor constante (não pode ser reatribuído).</p>
+            </div>
+            
+            <div class="questao">
+                <p><strong>3. O que acontece quando usamos o método prompt()? Qual tipo de dado ele retorna?</strong><br>
+                    O método prompt() exibe uma caixa de diálogo para o usuário inserir um valor e retorna esse valor como uma string. Se o usuário clicar em "Cancelar", o retorno será null.</p>
+            </div>
+
+            <div class="questao">
+                <p><strong>4. Qual a diferença entre alert(), confirm() e prompt()?</strong><br>
+                - <strong>alert()</strong>: Exibe uma mensagem simples.<br>
+                - <strong>confirm()</strong>: Exibe uma mensagem com opções "OK" e "Cancelar", retornando um booleano.<br>
+                - <strong>prompt()</strong>: Solicita entrada do usuário e retorna um valor em string.</p>
+            </div>
+
+            <div class="questao">
+                <p><strong>5. Explique o que significa concatenar strings e dê um exemplo utilizando + e template literals.</strong><br>
+                Concatenar strings significa unir duas ou mais strings.<br>
+
+                <strong>Exemplo:</strong> <br>
+                let saudacao = "Olá";<br>
+                let nome = "Ravi";<br>
+                let mensagem = saudacao + ", " + nome + "!";<br>
+                console.log(mensagem); <br>
+
+                <strong>Exemplo com template literals:</strong> <br>
+                let saudacao = "Olá";<br>
+                let nome = "Ravi";<br>
+                let mensagem = `${saudacao}, ${nome}!`;<br>
+                console.log(mensagem);<br>  
+            </div>
+
+            <div class="questao">
+                <p><strong>6. Como podemos converter uma string para número em JavaScript? Dê um exemplo prático.</strong><br>
+                    Para converter uma string para número em JavaScript, você pode usar o método Number() ou parseFloat() para números com casas decimais e parseInt() para números inteiros.<br>
+                    <strong>Exemplo:</strong> <br>
+                        let numeroString = "10.5";<br>
+                        let numero = Number(numeroString);<br>
+                        console.log(numero);</p>
+            </div>
+
+            <div class="questao">
+                <p><strong>7. Qual a importância do toFixed(n) quando lidamos com operações matemáticas?</strong><br>
+                    pois ele permite controlar o número de casas decimais exibidas, evitando problemas de precisão que podem ocorrer ao lidar com números decimais.<br>
+                    <strong>Exemplo:</strong> <br>
+                        let numero = 10 / 3;<br>
+                        console.log(numero.toFixed(2));<br>
+            </div>
+            
+            <a href="index.html" class="botao-voltar">Retornar ao Ciclo Anterior</a>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("background-music").volume = 0.50; 
+</script>
+</html>

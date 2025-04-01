@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediários</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/icon.png">
+</head>
+<body>
+
+    <audio id="background-music" autoplay loop>
+        <source src="assets/mp3/ENA_ Dream BBQ OST - Seashells.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="barras-laterais">
+        <div class="barraD"></div>
+        <div class="barraE"></div>
+    </div>
+
+    <div class="container">
+        <div class="conteudo">
+
+            <h1 class="titulo">Parte 3: Exercícios Práticos (Intermediários)</h1>
+
+            <script>
+                alert("Remember 'All it takes is a place and the right food'");
+            </script>
+
+            <div class="questao">
+                <p><strong>1. Pergunte ao usuário sua idade e exiba no documento se ele é maior 
+                ou menor de idade.</strong><br></p>
+                <script>
+                let idade =Number.parseFloat(prompt("Quantos ciclos sua existência já atravessou?"));
+                if (idade < 18){
+                    document.write(`Ainda não... ainda não está pronto. (${idade} < 18)`)
+                }
+                else {
+                    document.write(`O tempo te moldou. Mas para quê? (${idade} >= 18)`)
+                }
+                </script>
+                <br>
+            </div>
+
+            <div class="questao">
+                <p><strong>2. Peça ao usuário o preço original de um produto e a porcentagem de desconto.
+                Exiba o preço final após o desconto.</i></strong><br></p>
+                <script>
+                let preco =Number.parseFloat(prompt("Declare o valor do artefato em unidade monetária."));
+                let porcentagem =Number.parseFloat(prompt("Defina a porcentagem de extração etérea (ex: 50% = 0.50)."))
+
+                let desconto = preco * porcentagem
+                let produto = preco - desconto
+                document.write(`Valor Original: ${preco}<br>Tributo Etéreo: ${desconto}<br>Valor Final: ${produto}`)
+                </script>
+                <br>
+            </div>
+
+            <div class="questao">
+                <p><strong>3. Pergunte ao usuário um valor em reais (BRL) e converta para dólares (USD) 
+                considerando uma cotação fixa (exemplo: 1 USD = 5.00 BRL).</i></strong><br></p>
+                <script>
+                let real =Number.parseFloat(prompt("Quantos fragmentos terrestres deseja converter?"));
+
+                let dolar = real * 5.00
+                document.write(`R$${real} foi transmutado em US$${dolar}. \nBoa viagem entre dimensões!`)
+                </script>
+                <br>
+            </div>
+            
+            <a href="index.html" class="botao-voltar">Retornar ao Ciclo Anterior</a>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("background-music").volume = 0.50; 
+</script>
+</html>
