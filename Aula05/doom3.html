@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doom3</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/icon.png">
+</head>
+<body>
+    <style>
+ 
+    </style>
+
+    <audio id="background-music" autoplay loop>
+        <source src="assets/mp3/ENA_ Dream BBQ OST - Seashells.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="barras-laterais">
+        <div class="barraD"></div>
+        <div class="barraE"></div>
+    </div>
+    <div class="container">
+        <div class="conteudo">
+            <h1>TITLE SIM ISSO É UM TITLE</h1>
+            <input type="number" name="nr1" id="nr1">
+            <input type="number" name="nr2" id="nr2">
+            <input type="button" name="soma" id="btn">
+            <div id="res">Resultado</div>
+        </div>
+        <a href="index.html" class="botao-voltar">Retornar ao Ciclo Anterior</a>
+    </div>
+
+    <script>
+        document.getElementById("background-music").volume = 0.05;
+
+        let bt = document.querySelector("#btn");
+        let resultado = document.querySelector("#res");
+        bt.addEventListener("click", somar);
+
+        function somar(){
+            let n1 = Number(document.querySelector("#nr1").value);
+            let n2 = Number(document.querySelector("#nr2").value);
+
+            let soma = n1 + n2;
+            resultado.innerText = `A soma entre ${n1} + ${n2} = ${soma}`;
+        }
+    </script>
+    
+</body>
+</html>

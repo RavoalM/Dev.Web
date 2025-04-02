@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/icon.png">
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="assets/mp3/ENA_ Dream BBQ OST - Main Menu Theme.mp3" type="audio/mp3">
+    </audio>
+    <div class="barras-laterais">
+        <div class="barraD"></div>
+        <div class="barraE"></div>
+    </div>
+
+    <div class="container">
+        <img src="assets/img/Logo.png" class="logo">
+        
+        <div class="menu">
+            <a href="doom1.html">DOOM 1</a>
+            <a href="doom2.html">DOOM 2</a>
+            <a href="doom3.html">DOOM 3</a>
+        </div>
+
+        <img src="assets/img/Mao.gif" id="gifCursorEsquerda" width="60px" style="display: none; position: absolute; transform: scaleX(-1)">
+        
+        <img src="assets/img/Mao.gif" id="gifCursorDireita" width="60px" style="display: none; position: absolute;">
+    </div>
+</body>
+
+<script>
+    
+    document.getElementById("background-music").volume = 0.05;
+    document.querySelectorAll('.menu a').forEach(function(link) {
+        link.addEventListener('mouseover', function() {
+            let gifEsquerda = document.getElementById("gifCursorEsquerda");
+            let gifDireita = document.getElementById("gifCursorDireita");
+
+            gifEsquerda.style.display = "block";  
+            gifDireita.style.display = "block";  
+
+            gifEsquerda.style.left = (link.offsetLeft - 60) + 'px'; 
+            gifEsquerda.style.top = (link.offsetTop + link.offsetHeight / 2 - gifEsquerda.offsetHeight / 2) + 'px'; 
+
+            gifDireita.style.left = (link.offsetLeft + link.offsetWidth + 10) + 'px'; 
+            gifDireita.style.top = (link.offsetTop + link.offsetHeight / 2 - gifDireita.offsetHeight / 2) + 'px'; 
+        });
+
+        link.addEventListener('mouseleave', function() {
+            let gifEsquerda = document.getElementById("gifCursorEsquerda");
+            let gifDireita = document.getElementById("gifCursorDireita");
+
+            gifEsquerda.style.display = "none";  
+            gifDireita.style.display = "none";  
+        });
+    });
+</script>
+
+</html>

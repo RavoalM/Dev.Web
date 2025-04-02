@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doom1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/icon.png">
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="assets/mp3/ENA_ Dream BBQ OST - Seashells.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="barras-laterais">
+        <div class="barraD"></div>
+        <div class="barraE"></div>
+    </div>
+
+    <div class="container">
+        <div class="conteudo">
+            <h1 id="Tit1">OMG COISA</h1>
+            <p class="parah">Resultado coisado</p>
+            <div id="msg">Mensagem coisada</div>
+        </div>
+        <a href="index.html" class="botao-voltar">Retornar ao Ciclo Anterior</a>
+    </div>
+</body>
+<script>
+        document.getElementById("background-music").volume = 0.05;
+      window.document.write('Olá deer fellow!');
+        document.write(window.document.charset + "<br>");
+        document.write(window.document.appName + "<br>");
+        document.write(window.document.URL + "<br>");
+
+        document.getElementById('Tit1').innerText = "MUDEI O TITULO VAGABUNDO"
+        document.getElementById('Tit1').style.color = "pink"
+
+        let novoParagrafo = document.createElement('p');
+        novoParagrafo.innerText = "Este é um novo paragrafo";
+        document.body.appendChild(novoParagrafo)
+</script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doom2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/icon.png">
+</head>
+<body>
+    <style>
+ 
+    </style>
+
+    <audio id="background-music" autoplay loop>
+        <source src="assets/mp3/ENA_ Dream BBQ OST - Seashells.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="barras-laterais">
+        <div class="barraD"></div>
+        <div class="barraE"></div>
+    </div>
+
+    <div class="container">
+        <div id ="area">
+         interaja
+        </div>
+        <a href="index.html" class="botao-voltar">Retornar ao Ciclo Anterior</a>
+    </div>
+    
+    <script>
+        document.getElementById("background-music").volume = 0.05;
+    
+        let a = document.querySelector('#area');
+        a.addEventListener('click', clicar);
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', sair)
+    
+        function clicar()
+        {
+            a.innerText = "boooo";
+            area.style.background = "red";
+            area.style.color = "white";
+        }
+
+        function entrar()
+        {
+            a.innerText = "passou";
+        }
+        
+        function sair ()
+        {
+            a.innerText = "Saiu...";
+            a.style.color = "black";
+            a.style.background = "brown";
+        }
+    
+    </script>
+</body>
+</html>
