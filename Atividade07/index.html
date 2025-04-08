@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/Grimm_Troupe_Icon.png">
+    
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="assets/mp3/Hollow Knight - Accordion Brumm.mp3" type="audio/mp3">
+    </audio>
+
+    <div id="particles"></div>
+
+    <div class="menu">
+        <a href="teorico.html">Teorico</a>
+        <a href="atividade.html">Atividade</a>
+        <a href="semfundo.html">Mexe com o fundo</a>
+    </div>
+</body>
+
+<script>
+        
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("particles");
+        for (let i = 0; i < 20; i++) {
+            let particula = document.createElement("div");
+            particula.className = "particulaMenu";
+            particula.style.left = Math.random() * 100 + "vw";
+            particula.style.top = Math.random() * 100 + "vh";
+            particula.style.animationDuration = (Math.random() * 2 + 2) + "s";
+            container.appendChild(particula);
+        }
+    });
+
+    document.getElementById("background-music").volume = 0.10; 
+    
+</script>
+
+</html>

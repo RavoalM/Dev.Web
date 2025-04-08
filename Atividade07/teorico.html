@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teorico</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/Grimm_Troupe_Icon.png">
+</head>
+
+<body class="fundoTenta">
+
+    <audio id="background-music" autoplay loop>
+        <source src="assets/mp3/Hollow Knight - Accordion Nymm.mp3" type="audio/mp3">
+    </audio>
+
+    <img src="assets/img/Main_tent_chain.png" class="lanterna" style=" left: 20%;">
+    <img src="assets/img/Main_tent_chain.png" class="lanterna" style=" right: 20%;">
+
+    <div id="particles"></div>
+
+    <div class="container">
+        <div class="conteudo">
+
+            <h1 class="titulo">Parte 1: Questões Teóricas</h1>
+
+            <div class="questao">
+                <p><strong>1. O que é o DOM e qual sua importância no JavaScript?</strong><br>
+                    É a estrutura em árvore da página HTML. O JavaScript usa o DOM para acessar e modificar elementos da
+                    página.</p>
+            </div>
+
+            <div class="questao">
+                <p><strong>2. Qual a diferença entre document.getElementById e document.querySelector?</strong><br>
+                    - <strong>getElementById</strong>: Busca por ID.<br>
+                    - <strong>querySelector</strong>: Usa qualquer seletor CSS (ID, classe, tag).<br></p>
+            </div>
+
+            <div class="questao">
+                <p><strong>3. O que são eventos em JavaScript? Cite três exemplos.</strong><br>
+                    Eventos são ações que ocorrem no navegador e o JavaScript pode responder a essas ações com
+                    funções.<br>
+                    - <strong>click</strong>: Quando o usuário clica em algo<br>
+                    - <strong>mouseover</strong>: Quando o mouse passa por cima de um elemento<br>
+                    - <strong>keydown</strong>: Quando uma tecla é pressionada<br></p>
+            </div>
+
+            <div class="questao">
+                <p><strong>4. Explique a diferença entre innerText e innerHTML.</strong><br>
+                    - <strong>innerText</strong>: Retorna ou altera apenas o texto visível de um elemento,
+                    sem considerar tags HTML.<br>
+                    - <strong>innerHTML</strong>: Retorna ou altera o conteúdo HTML, incluindo as tags.</p>
+            </div>
+
+            <div class="questao">
+                <p><strong>5. Como podemos alterar o estilo de um elemento HTML via JavaScript?</strong><br>
+                    Você pode acessar a propriedade .style do elemento e mudar qualquer CSS direto por ela.<br>
+                    <strong>Exemplo:</strong> <br>
+                    document.getElementById("titulo").style.color = "red";<br>
+                    document.querySelector(".box").style.backgroundColor = "black";<br>
+            </div>
+            <a href="index.html" class="botao-voltar">Retornar a Dirtmouth</a>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("particles");
+        for (let i = 0; i < 20; i++) {
+            let particula = document.createElement("div");
+            particula.className = "particula";
+            particula.style.left = Math.random() * 100 + "vw";
+            particula.style.top = Math.random() * 100 + "vh";
+            particula.style.animationDuration = (Math.random() * 2 + 2) + "s";
+            container.appendChild(particula);
+        }
+    });
+
+    document.getElementById("background-music").volume = 0.05; 
+</script>
+
+</html>

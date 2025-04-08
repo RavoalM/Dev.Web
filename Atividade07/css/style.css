@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+
+html, body {
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+    background: url('../assets/img/Screenshot_HK_Grimmsteed_01.png') no-repeat center center;
+    background-size: cover;
+    font-family: 'Cinzel Decorative', serif;
+    position: relative;
+    cursor: url('../assets/cursor/cursor.cur'), auto;
+}
+
+.fundoTenta
+{
+    background: url('../assets/img/Screenshot_HK_Grimm_01.png') no-repeat center center;
+    background-size: cover;
+}
+
+.questao {
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.6; 
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto; 
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    color: white;
+    align-items: center;
+    overflow-y: auto; 
+    box-sizing: border-box;
+    max-height: 100vh; 
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3); 
+}
+
+.menu a {
+    display: block;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+    animation: brilho-texto 2s infinite ease-in-out;
+}
+
+@keyframes brilho-texto {
+    0% { text-shadow: 0 0 5px rgba(255, 100, 100, 0.8); }
+    50% { text-shadow: 0 0 15px rgba(252, 31, 31, 0.8); }
+    100% { text-shadow: 0 0 5px rgba(255, 100, 100, 0.8); }
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    transition: box-shadow 0.4s ease-in-out, background 0.4s ease-in-out;
+    text-shadow: -2px -2px 5px rgba(0, 0, 0, 0.6); 
+    cursor: url('../assets/cursor/cursor.cur'), pointer;
+}
+
+/* Animação de pulsação para lanternas */
+.lanterna {
+    position: absolute;
+    width: 100px;
+    top: 0;
+    filter: drop-shadow(0 0 20px rgba(255, 50, 50, 0.9));
+    animation: balanco 4s infinite ease-in-out alternate, pulse 2s infinite ease-in-out;
+    transform-origin: top;
+}
+
+@keyframes balanco {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+@keyframes pulse {
+    0% { filter: drop-shadow(0 0 15px rgba(255, 50, 50, 0.7)); }
+    50% { filter: drop-shadow(0 0 25px rgba(255, 50, 50, 1)); }
+    100% { filter: drop-shadow(0 0 15px rgba(255, 50, 50, 0.7)); }
+}
+
+.cortina {
+    position: absolute;
+    height: 100vh;
+    width: auto; 
+}
+
+.cortina.direita {
+    right: 0;
+    transform: rotateY(180deg); 
+}
+
+.botao-voltar {
+    display: flex;
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: fit-content;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.botao-voltar:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+    cursor: url('../assets/cursor/cursor.cur'), pointer;
+}
+
+.particula {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 100, 100, 0.8);
+    border-radius: 50%;
+    opacity: 0;
+    animation: glow 3s infinite ease-in-out;
+    animation-delay: calc(-3s * var(--random));
+}
+
+@keyframes glow {
+    0% { opacity: 0; transform: translateY(0) scale(1); }
+    50% { opacity: 1; transform: translateY(-20px) scale(1.2); }
+    100% { opacity: 0; transform: translateY(-40px) scale(1); }
+}
+@keyframes flash {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+.particulaMenu {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 100, 100, 0.8);
+    border-radius: 50%;
+    animation: flash 3s infinite ease-in-out;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    background: rgba(0, 0, 0, 0.7); 
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.input-group input, 
+.input-group button {
+    font-size: 16px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: fit-content;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.input-group input {
+    flex: 1;
+}
+
+.input-group button {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.input-group button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.formulario input,
+.formulario textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 8px;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.formulario-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center; 
+    
+}
+
+.formulario button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.formulario button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: black;
+}

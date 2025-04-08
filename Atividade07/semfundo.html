@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 e 9</title>
+    <link rel="icon" href="assets/img/Grimm_Troupe_Icon.png">
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    .botao-voltar {
+        display: flex;
+        margin: 20px auto;
+        padding: 10px 20px;
+        width: fit-content;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        justify-content: center;
+        border-radius: 10px;
+    }
+
+    .botao-voltar:hover {
+        background: rgba(255, 255, 255, 0.3);
+        color: black;
+        cursor: url('../assets/cursor/cursor.cur'), pointer;
+    }
+
+    .input-group {
+        display: flex;
+        margin: 20px auto;
+        padding: 10px 20px;
+        width: fit-content;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        justify-content: center;
+        border-radius: 10px;
+    }
+
+    .input-group input,
+    .input-group button {
+        font-size: 16px;
+        margin: 20px auto;
+        padding: 10px 20px;
+        width: fit-content;
+        border: none;
+        cursor: url('../assets/cursor/cursor.cur'), pointer;
+        border-radius: 5px;
+        outline: none;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+    }
+
+    .input-group button:hover {
+        background: rgba(255, 255, 255, 0.5);
+        color: black;
+    }
+</style>
+
+<body class="fundo">
+
+    <audio id="background-music" autoplay loop>
+        <source src="assets/mp3/Hollow Knight - Accordion Nymm.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="input-group">
+        <button onclick="mudarCor()">Mudar Cor</button>
+    </div>
+
+    <div class="input-group">
+        <input type="text" id="corInput" placeholder="Digite uma cor (ex: red, #123456)">
+    </div>
+    <a href="index.html" class="botao-voltar">Retornar a Dirtmouth</a>
+    </div>
+</body>
+
+<script>
+
+    function mudarCor() {
+        document.body.style.backgroundColor =
+            "#" + Math.floor(Math.random() * 16777215).toString(16);
+    }
+
+    document.getElementById("corInput").addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            document.body.style.backgroundColor = this.value;
+        }
+    });
+    document.getElementById("background-music").volume = 0.05;
+
+</script>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/Grimm_Troupe_Icon.png">
+</head>
+
+<body class="fundoTenta">
+
+    <audio id="background-music" autoplay loop>
+        <source src="assets/mp3/Hollow Knight - Accordion Nymm.mp3" type="audio/mp3">
+    </audio>
+
+    <img src="assets/img/Main_tent_chain.png" class="lanterna" style=" left: 20%;">
+    <img src="assets/img/Main_tent_chain.png" class="lanterna" style=" right: 20%;">
+
+    <div id="particles"></div>
+    <div class="container">
+        <div class="conteudo">
+
+            <div class="input-group">
+                <input type="text" id="textoInput" placeholder="Digite algo">
+                <button id="btnExibir">Exibir</button>
+            </div>
+
+            <p id="textoExibido" class="questao"></p>
+
+            <div class="input-group">
+                <button onclick="diminuir()">-</button>
+                <span id="contador">0</span>
+                <button onclick="aumentar()">+</button>
+            </div>
+
+            <div class="formulario-container">
+                <form class="formulario" id="formulario">
+                    <input type="text" id="nome" placeholder="Nome" required>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <textarea id="mensagem" placeholder="Mensagem" rows="3" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="dadosExibidos" class="questao"></p>
+            </div>
+
+            <a href="index.html" class="botao-voltar">Retornar a Dirtmouth</a>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("btnExibir").addEventListener("click", function () {
+            let inputTexto = document.getElementById("textoInput").value;
+            let paragrafo = document.getElementById("textoExibido");
+
+            if (inputTexto.trim() === "") {
+                paragrafo.textContent = "Por favor, digite algo!";
+                paragrafo.style.color = "red";
+            } else {
+                paragrafo.textContent = inputTexto;
+                paragrafo.style.color = "white";
+            }
+        });
+    });
+
+    let valor = 0;
+
+    function aumentar() {
+        valor++;
+        document.getElementById("contador").innerText = valor;
+    }
+
+    function diminuir() {
+        valor--;
+        document.getElementById("contador").innerText = valor;
+    }
+
+    document.getElementById("formulario").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let nome = document.getElementById("nome").value;
+        let email = document.getElementById("email").value;
+        let mensagem = document.getElementById("mensagem").value;
+        let resultado = document.getElementById("dadosExibidos");
+
+        resultado.innerHTML = `
+    <p><strong>Nome:</strong> ${nome}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Mensagem:</strong> ${mensagem}</p>
+`;
+
+        resultado.style.color = "white";
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("particles");
+        for (let i = 0; i < 20; i++) {
+            let particula = document.createElement("div");
+            particula.className = "particulaMenu";
+            particula.style.left = Math.random() * 100 + "vw";
+            particula.style.top = Math.random() * 100 + "vh";
+            particula.style.animationDuration = (Math.random() * 2 + 2) + "s";
+            container.appendChild(particula);
+        }
+    });
+    document.getElementById("background-music").volume = 0.10; 
+</script>
+
+</html>
