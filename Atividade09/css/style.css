@@ -15,7 +15,7 @@ body {
     padding: 30px;
     border-radius: 15px;
     border: 30px solid transparent;
-    border-image: url("Assets/img/Border-Image.png") 50 round;
+    border-image: url("../assets/img/Border-Image.png") 50 round;
 }
 
 h1 {
@@ -143,11 +143,11 @@ body.light-mode li.completed {
 }
 
 body.light-mode .edit img {
-    content: url("Assets/img/lapis-light.png");
+    content: url("../assets/img/lapis-light.png");
 }
 
 body.light-mode .delete img {
-    content: url("Assets/img/lata-de-lixo-light.png");
+    content: url("../assets/img/lata-de-lixo-light.png");
 }
 
 body.light-mode::after {
@@ -168,7 +168,7 @@ body.dark-mode .container {
     background-color: #242323;
     box-shadow: 0 0 20px #B6FF00;
     color: #333;
-    border-image: url("Assets/img/Border-Image - Editado.png") 50 round;
+    border-image: url("../assets/img/Border-Image - Editado.png") 50 round;
 }
 
 body.dark-mode #task-input {
@@ -201,11 +201,11 @@ body.dark-mode li.completed {
 }
 
 body.dark-mode .edit img {
-    content: url("Assets/img/lapis-dark.png");
+    content: url("../assets/img/lapis-dark.png");
 }
 
 body.dark-mode .delete img {
-    content: url("Assets/img/lata-de-lixo-dark.png");
+    content: url("../assets/img/lata-de-lixo-dark.png");
 }
 
 body.dark-mode::after {

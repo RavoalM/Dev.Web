@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções, Arrays e Loops</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/icon.png">
+</head>
+
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="assets/mp3/ENA_ Dream BBQ OST - Seashells.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="barras-laterais">
+        <div class="barraD"></div>
+        <div class="barraE"></div>
+    </div>
+
+    <div class="container">
+        <div class="conteudo">
+            <h1>JavaScript Interativo</h1>
+
+            <section>
+                <h2>Array e For</h2>
+                <input type="text" id="nomeLista" placeholder="Adicionar nome à lista">
+                <button id="btAdicionarNome">Adicionar</button>
+                <button id="btRemoverUltimo">Remover Último Nome</button>
+                <button id="btApagarLista">Apagar Lista</button>
+                <ul id="listaNomes"></ul>
+            </section>
+
+            <a href="index.html" class="botao-voltar">Retornar ao Ciclo Anterior</a>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("background-music").volume = 0.05;
+
+        document.getElementById('btAdicionarNome').addEventListener('click', adicionarNome);
+        document.getElementById('btRemoverUltimo').addEventListener('click', removerUltimoNome);
+        document.getElementById('btApagarLista').addEventListener('click', apagarLista);
+
+        let nomes = [];
+
+        function adicionarNome() {
+            let nome = document.getElementById('nomeLista').value;
+
+            if (nome) {
+                nomes.push(nome);
+                document.getElementById('nomeLista').value = "";
+                atualizarNomes();
+            }
+        }
+
+        function removerUltimoNome() {
+            if (nomes.length > 0) {
+                nomes.pop(); 
+                atualizarNomes();
+            }
+        }
+
+        function apagarLista() {
+            nomes = []; 
+            atualizarNomes();
+        }
+
+
+        function atualizarNomes() {
+            let ul = document.getElementById('listaNomes');
+            ul.innerHTML = "";
+
+            nomes.forEach((n, i) => {
+                let li = document.createElement('li');
+                li.innerText = `${i + 1}. ${n}`;
+                ul.appendChild(li);
+            })
+        }
+
+    </script>
+</body>
+
+</html>
